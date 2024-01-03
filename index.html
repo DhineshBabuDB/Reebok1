@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Assets/Logo.JPG" alt="Logo" width="180px" height="25px">
+        </div>
+        <nav>
+            <a href="#">NEW</a>
+            <a href="#">MEN</a>
+            <a href="#">WOMEN</a>
+            <a href="#">KIDS</a>
+            <a href="#">SPORTS</a>
+            <a href="#">CLASSIC</a>
+            <a href="#" id="red">SALE</a>
+        </nav>
+        <div class="searchbar">
+            <button><img src="Assets/search.png" alt="search" width="15px"  height="15px"></button>
+            <input type="text" placeholder="Search">
+        </div>
+        <div class="deliverybutton">
+            <button>EXPRESS DELIVERY</button>
+        </div>
+    </header>
+    
+    <div class="bodyarea">
+        <div class="quotes">
+            <span id="quotes1">“I CAN DO</span>
+            <span id="quotes2">THIS</span>
+            <span id="quotes3">ALL DAY.”</span>
+        </div>
+        <div class="dropdown">
+            <select name="" id="listitems">
+                <option value="Select">What you made of ?</option>
+            </select>
+            <button>GO</button>
+        </div>
+    </div>
+    <script>
+        let items = ["Basketball", "Cricket", "Football", "Badminton", "Swimming", "Tennis", "Gymnastics", "Volleyball", "Boxing", "TableTennis", "Hockey", "Running", "Wrestling", "PowerLifting", "WeigthLifting", "Casuals"]
+
+        items.forEach((values)=>{
+            const options = document.createElement('option')
+            options.textContent = values
+            options.value = values
+            document.getElementById("listitems").appendChild(options)
+        })
+    </script>
+</body>
+</html>
